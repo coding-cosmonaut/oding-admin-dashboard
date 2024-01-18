@@ -5,22 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Comrade-Dashboard</title>
   </head>
   <body>
     <main>
       <div class="container">
+        
         <div class="header">
           <div class="search">
+            <img
+              class="icon"
+              src="./images/icons/search-icon.svg"
+              alt="search icon"
+            />
             <input type="text" />
           </div>
-          <div class="header-details">
-            <ul>
-              <li>Notification</li>
-              <li>Photo</li>
-              <li>Alexey Morgun</li>
-            </ul>
-          </div>
+          <ul>
+            <li>
+              <img
+                class="icon"
+                src="./images/icons/notification.svg"
+                alt="notification icon"
+              />
+            </li>
+            <li>
+              <img
+                class="icon"
+                src="./images/icons/account.svg"
+                alt="account icon"
+              />
+            </li>
+            <li>Alexey Morgun</li>
+          </ul>
         </div>
 
         <div class="subheader">
@@ -120,8 +148,6 @@
             </ul>
           </div>
         </div>
-
-
       </div>
     </main>
     <script src="index.js"></script>
