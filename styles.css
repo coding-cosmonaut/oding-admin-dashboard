@@ -1,0 +1,40 @@
+:root {
+  --soviet-red: #af002a;
+  --accent-yellow: #ffd50fff;
+  --black-bg: rgb(36, 33, 33);
+  --placeholder-color: #6c757d;
+  --font-heading: "Teko", sans-serif;
+  --font-body: "Comfortaa", sans-serif;
+  --spacing-sm: 16px;
+  --spacing-md: 34px;
+  --spacing-lg: 50px;
+}
+
+/*GRID LAYOUT*/ 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: 
+  'dashboard header'
+  'dashboard subheader'
+  'dashboard content';
+  gap: var(--spacing-sm);
+}
+
+.header {
+  grid-area: header;
+}
+
+.subheader {
+  grid-area: subheader;
+}
+
+.dashboard {
+  grid-area: dashboard;
+}
+
+.dashboard h2, .dashboard
+
+.main-content {
+  grid-area: content;
+}
