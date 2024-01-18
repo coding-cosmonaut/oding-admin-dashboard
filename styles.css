@@ -10,9 +10,20 @@
   --spacing-lg: 50px;
 }
 
-ul,li {
+/*GENERAL*/
+ul,
+li {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 .icon {
@@ -20,6 +31,25 @@ ul,li {
   height: auto;
 }
 .icon:hover {
+  cursor: pointer;
+}
+
+.container > .header,.subheader,.dashboard {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+button {
+  padding: calc(var(--spacing-sm) /2) var(--spacing-md);
+  letter-spacing: 2.2px;
+  border-radius: 18px;
+  color: white;
+  border: none;
+  background-color: var(--soviet-red);
+  transition: 0.3s ease;
+}
+button:hover {
   cursor: pointer;
 }
 
@@ -32,6 +62,7 @@ ul,li {
     "dashboard subheader"
     "dashboard content";
   gap: var(--spacing-sm);
+  padding: var(--spacing-sm) calc(var(--spacing-lg)) 0 0;
 }
 
 .header {
@@ -54,7 +85,6 @@ ul,li {
 .header {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: var(--spacing-sm) calc(var(--spacing-sm)/1.2) 0 0;
 }
 
 .header .search {
@@ -72,19 +102,51 @@ ul,li {
   height: auto;
   border-radius: var(--spacing-sm);
   border: none;
-  background-color: #E5E4E2;
+  background-color: #e5e4e2;
 }
-input[type='text']:focus {
+input[type="text"]:focus {
   outline: 1px solid black;
 }
 
-/*HEADER-COLUMN-2*/ 
+/*HEADER-COLUMN-2*/
 .header ul {
-  font-family: var(--font-body);
+  /* font-family: var(--font-body);
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1.1rem; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
+}
+
+.header ul:last-child {
+  text-align: center;
+}
+
+/*SUBHEADER */ 
+.subheader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.subheader ul {
+  justify-self: start;
+  display: grid;
+  grid-template-columns: 0.15fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.subheader .subheader-first-li  {
+  grid-row: 1/-1;
+  place-self: center start;
+}
+
+.subheader .subheader-last-li {
+  padding-top: calc(var(--spacing-sm)/3);
+}
+
+
+.subheader .subheader-bttns {
+  justify-self: end;
+  align-self: center;
 }
