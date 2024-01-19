@@ -62,7 +62,7 @@ button:hover {
     "dashboard subheader"
     "dashboard content";
   gap: var(--spacing-sm);
-  padding: var(--spacing-sm) calc(var(--spacing-lg)) 0 0;
+  padding: 0 calc(var(--spacing-lg)) 0 0;
 }
 
 .header {
@@ -75,6 +75,8 @@ button:hover {
 
 .dashboard {
   grid-area: dashboard;
+  background-color: var(--black-bg);
+  color: white;
 }
 
 .main-content {
@@ -85,6 +87,7 @@ button:hover {
 .header {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  padding-top: var(--spacing-sm);
 }
 
 .header .search {
@@ -110,9 +113,6 @@ input[type="text"]:focus {
 
 /*HEADER-COLUMN-2*/
 .header ul {
-  /* font-family: var(--font-body);
-  font-weight: 300;
-  font-size: 1.1rem; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -141,12 +141,40 @@ input[type="text"]:focus {
   place-self: center start;
 }
 
-.subheader .subheader-last-li {
-  padding-top: calc(var(--spacing-sm)/3);
-}
-
-
 .subheader .subheader-bttns {
   justify-self: end;
   align-self: center;
+}
+
+/*DASHBOARD*/ 
+.dashboard {
+  display: grid;
+  grid-template-rows: 0.15fr 0.5fr 1fr;
+  gap: 25px;
+  padding: var(--spacing-sm) var(--spacing-sm) 0 var(--spacing-sm);
+}
+
+.dashboard .heading {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+}
+
+.dash-img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(116deg) brightness(103%) contrast(102%);
+  padding-right: calc(var(--spacing-sm) / 2);
+}
+
+.dashboard-links:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.dashboard ul li {
+  padding: var(--spacing-sm);
+  display: flex;
+  align-items: end;
+}
+
+.dashboard h2 {
+  margin: 0;
 }
